@@ -1,0 +1,13 @@
+go-to shortcuts
+
+1.pwd = your location 
+2.cd=enters place
+3.cd ..=goes back one folder
+4.git branch name=creats a branch
+5.git checkout =to enter a branch
+6.git status =to see history
+7.git add .=stages changes 
+8.git commit -m "comment"=commits messeges
+9.git log --oneline=commit history 
+10.git reset =takes you back to a specific commit and delets all commits till that point 
+11.git revert=removes changes from old commit by creating a new one that reverses it 
