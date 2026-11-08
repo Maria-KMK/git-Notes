@@ -1,35 +1,65 @@
-GIT shortcuts for dummys  
+GIT SHORTCUTS FOR DUMMIES
 
-1.pwd =tells you your location 
-2.git init= initilizes an empty repository3.mkdir git-Notes = to creat a directory (folder)
-4.cd git-Notes = to get into the folder 
-5.touch file-name = to creat an empty file 
-7.ls = The files inside git-Notes
-8.ls -la= shows hidden files
-9.cd ..=goes back one step
-10.git status =checks for changes 
-11.git add. =stages all the changes within the current dirctory 
-12.git add file = only adds one file 
-13.git commit -m "comment"= to commit changes 
-14.git reset Head-"this but wavy" =will undo the last commit 
-15.git rm =deletes file and moves it directly to the staging area
-16.git reset --hard head= to restor deleted files if staged or commited 
-17.git log --oneline=summry of commit history
+1. BASIC COMMANDS
 
-18.git branch =shows the branches 
-19.git branch name =creats a new branches 
-20.git checkout branch-name= switches to the branch
-21.git merge main -m=to add main to branch 
-22.git diff log-number=shows the diffrence between two commits 
-23.git push =to bring fro local into remote
-24.git pull=to bring from remote to local 
-25.git restore file-name=Restors last changes if not commited 
+1. pwd = tells you your current location.
+2. git init = initializes an empty repository.
+3. mkdir git-Notes = creates a directory (folder).
+4. cd git-Notes = enters the folder.
+5. touch file-name = creates an empty file.
+6. ls = shows the files inside the current directory.
+7. ls -la = shows all files, including hidden files.
+8. cd .. = goes back one step (parent folder).
 
-26.git stash= for staging unfinshed work 
-27.pop =to bring your uncommited work back (disapers from list)
-28.apply=for multiple stashes (gets pulled but dosent disappear from list)
-29.list =list of stashes nummbered 
-30.drop=removes stash manually
+2. CHECKING AND SAVING CHANGES
 
-31.git revert =removes changes from old commit by creating a new one that reverses it
-32.git rebase =adds from main to branch if main had work added to it but does not log it 
+9. git status = checks for changes.
+10. git add . = stages all changes within the current directory and its subdirectories.
+11. git add file-name = stages only one file.
+12. git commit -m "comment" = commits (saves) the staged changes.
+13. git log --oneline = shows a short summary of commit history.
+14. git diff = shows unstaged changes.
+15. git diff --staged = shows staged changes.
+
+3. UNDOING CHANGES AND DELETING FILES
+
+16. git reset --soft HEAD~1 = undoes the last commit but keeps changes staged.
+17. git reset HEAD~1 = undoes the last commit but keeps changes unstaged.
+18. git rm file-name = deletes a file and moves its deletion directly to the staging area.
+19. git rm --cached file-name = stops tracking a file but keeps it on your computer.
+20. git reset --hard HEAD = discards all uncommitted changes and restores tracked files to the latest commit.
+21. git restore file-name = restores the last committed version of a file if it has unstaged changes or was deleted.
+22. git restore --staged file-name = unstages a file but keeps its changes.
+
+4. BRANCHES
+
+23. git branch = shows all local branches.
+24. git branch branch-name = creates a new branch.
+25. git checkout branch-name = switches to an existing branch.
+26. git merge branch-name = merges the specified branch into your current branch.
+27. git branch -d branch-name = deletes a branch if it has already been merged.
+
+5. COMPARING CHANGES
+
+28. git diff commit-ID-1 commit-ID-2 = shows the differences between two commits.
+29. git show commit-ID = shows the details and changes of a specific commit.
+
+6. GITHUB AND REMOTE REPOSITORIES
+
+30. git clone URL = downloads a repository from GitHub to your computer for the first time.
+31. git push = uploads commits from your local repository to GitHub.
+32. git pull = brings changes from GitHub to your local repository.
+33. git fetch = downloads updates from GitHub without merging them into your current branch.
+
+7. GIT STASH
+
+34. git stash = temporarily saves unfinished tracked work without committing it.
+35. git stash pop = brings back your latest stashed work and removes it from the stash list if successful.
+36. git stash apply = brings back stashed work but keeps it in the stash list.
+37. git stash list = shows all saved stashes.
+38. git stash drop = removes a stash manually.
+
+8. REVERT AND REBASE
+
+39. git revert commit-ID = reverses changes from an old commit by creating a new commit.
+40. git rebase main = replays your current branch's commits on top of the latest main branch.
