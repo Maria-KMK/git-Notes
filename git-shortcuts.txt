@@ -1,0 +1,35 @@
+GIT shortcuts for dummys  
+
+1.pwd =tells you your location 
+2.git init= initilizes an empty repository3.mkdir git-Notes = to creat a directory (folder)
+4.cd git-Notes = to get into the folder 
+5.touch file-name = to creat an empty file 
+7.ls = The files inside git-Notes
+8.ls -la= shows hidden files
+9.cd ..=goes back one step
+10.git status =checks for changes 
+11.git add. =stages all the changes within the current dirctory 
+12.git add file = only adds one file 
+13.git commit -m "comment"= to commit changes 
+14.git reset Head-"this but wavy" =will undo the last commit 
+15.git rm =deletes file and moves it directly to the staging area
+16.git reset --hard head= to restor deleted files if staged or commited 
+17.git log --oneline=summry of commit history
+
+18.git branch =shows the branches 
+19.git branch name =creats a new branches 
+20.git checkout branch-name= switches to the branch
+21.git merge main -m=to add main to branch 
+22.git diff log-number=shows the diffrence between two commits 
+23.git push =to bring fro local into remote
+24.git pull=to bring from remote to local 
+25.git restore file-name=Restors last changes if not commited 
+
+26.git stash= for staging unfinshed work 
+27.pop =to bring your uncommited work back (disapers from list)
+28.apply=for multiple stashes (gets pulled but dosent disappear from list)
+29.list =list of stashes nummbered 
+30.drop=removes stash manually
+
+31.git revert =removes changes from old commit by creating a new one that reverses it
+32.git rebase =adds from main to branch if main had work added to it but does not log it 
